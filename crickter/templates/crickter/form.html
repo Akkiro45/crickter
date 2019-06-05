@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'crickter/form.css' %}">
+</head>
+<body>
+	<h1>Crickter</h1>
+	{% if if request.user.is_authenticated %}
+	<form method="POST" id="form">
+		{% csrf_token %}
+		<!-- <div id="name">
+			
+			<input type="text" name="name" placeholder="Enter Name " autofocus required>
+		</div> --> 
+		<br>
+		<div id="text">
+			<!-- <label>Text  </label> -->
+			<!-- <input type="text" name="msg" placeholder="Enter Text " autofocus required> -->
+			<textarea name="msg"  rows="10" cols="30" placeholder="Enter Text " autofocus required></textarea>
+		</div>
+		<br>
+		<button type="submit">Save</button>
+	</form>
+	{% else %}
+	<h1><b>Pls Login</b></h1>
+	{% endif %}
+</body>
+</html>

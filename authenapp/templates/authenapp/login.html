@@ -1,0 +1,10 @@
+{% extends "crickter/base.html" %}
+{% block content %}
+<form method="POST">
+	{% csrf_token %}
+	<br>
+	<input type="text" name="username" id="username" placeholder="Name" required><br>
+	<input type="password" name="password" id="password" placeholder="Password" required><br>
+	<button type="submit">Login</button>
+</form>
+{% endblock %}

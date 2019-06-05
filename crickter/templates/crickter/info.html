@@ -1,0 +1,23 @@
+{% extends "crickter/base.html" %}
+
+{% block content %}
+
+	{% if objects is not None %}
+	<hr>
+	{% for obj in objects %}
+			<div class="container">
+				<div class="top">
+					<span >{{ obj.name }}  </span><small>{{ obj.timestamp }}</small>
+				</div>
+				<br>
+				<div class="bottom">
+					{{ obj.msg }}	
+				</div>
+			</div>
+		<hr>
+	{% endfor %}
+	{% else %}
+	<h1><b>Pls Login</b></h1>
+	{% endif %}
+
+{% endblock %}

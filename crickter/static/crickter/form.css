@@ -1,0 +1,28 @@
+body{
+	background-color: gray;
+}
+h1{
+	text-align: center;
+	font-size: 3em;
+}
+#form{
+	margin-left: 100px;
+	margin-top: 50px;
+}
+label{
+	padding: 20px;
+	font-size: 2em;
+}
+input{
+	padding: 5px;
+	font-size: 1em;	
+}
+button{
+	padding: 5px 20px;
+	font-size: 1.5em;	
+	margin-top: 5px;
+	margin-left: 50px;
+}
+#name{
+	padding-bottom: 5px;
+}

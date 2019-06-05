@@ -1,0 +1,36 @@
+{% extends "crickter/base.html" %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<h1><b>Welcome {{ request.user }}</b></h1>
+<form method="POST" id="form">
+		{% csrf_token %}
+		<div id="text">
+			<textarea name="msg"  rows="10" cols="30" placeholder="Enter Text " autofocus required></textarea>
+		</div>
+		<br>
+		<button type="submit">Save</button>
+	</form>
+<hr>
+	{% for obj in objects %}
+	
+			<div class="container">
+				<div class="top">
+					{% if obj.name is request.user %}
+					<span >{{ obj.name }}  </span><small>{{ obj.timestamp }}</small>
+					{% else %}
+					<span>{{ obj.name }}  </span><small>{{ obj.timestamp }}</small>
+					{% endif %}
+				</div>
+				<br>
+				<div class="bottom">
+					{{ obj.msg }}	
+				</div>
+			</div>
+	
+		<hr>
+	{% endfor %}
+{% else %}
+<h1><b>Pls Login</b></h1>
+{% endif %}
+{% endblock %}

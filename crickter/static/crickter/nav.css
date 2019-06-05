@@ -1,0 +1,28 @@
+ul{
+	overflow: hidden;
+	margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+li{
+    float: left;
+    list-style-type: none;
+}
+li a{
+    display: block;
+    text-decoration: none;
+    padding: 15px 18px;
+    color: rebeccapurple;
+    text-align: center;
+    color: white;
+}
+li a:hover{
+    background-color: #dfe3ee;
+    color: black;
+}
+.righty{
+    float: right;
+}
+.active{
+    background-color: black;
+}

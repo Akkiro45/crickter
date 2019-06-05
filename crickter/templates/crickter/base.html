@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>crckter</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'crickter/style.css' %}">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'crickter/list.css' %}">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'crickter/nav.css' %}">
+</head>
+<body>
+<h1 class="head">Crickter</h1>
+<!-- <a href="/add/" class="link">Add</a>
+<a href="/auth/login/">Login</a>
+<a href="/auth/logout/">Logout</a>
+<a href="/auth/reg/">Registeraion</a> -->
+<ul class="links">
+	<li class="active"><a href="/">Home</a></li>
+	<!-- <li><a href="/add/" >Add</a></li> -->
+	<li><a href="/info/">History</a></li>
+	<li class="righty"><a href="/auth/reg/">Registeraion</a></li>
+	<li class="righty"><a href="/auth/logout/">Logout</a></li>
+	<li class="righty"><a href="/auth/login/">Login</a></li>
+</ul>
+<br>
+<br>
+{% block content %}
+{% endblock %}
+</body>
+</html>
