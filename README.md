@@ -1,2 +1,5 @@
 # crickter
-It is simple django app for cricket fans to chat.
+Simple django app for cricket fans to chat.
+
+## Built With
+  * Django
